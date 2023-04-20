@@ -27,9 +27,10 @@ Bonus:
 const {createApp} = Vue
 
 createApp({
+    // VARIABILI
     data() {
         return{
-            // VARIABILI
+            // GENERALE
             todos: [
                 {
                     text: 'Fare i compiti',
@@ -45,6 +46,7 @@ createApp({
                 },
             ],
 
+            // INPUT UTENTE
             newToDo: {
                 text: '',
                 done: false
@@ -56,8 +58,9 @@ createApp({
 
     },
 
+    // FUNZIONI
     methods: {
-        // FUNZIONI
+        // AGGIUNTA TO DO ALLA LISTA
         createToDo(){
             if(this.newToDo.text != ''){
                 this.todos.unshift(this.newToDo)
@@ -66,6 +69,14 @@ createApp({
             }
         },
 
+        // CHANGE VALORE BOOLEANO (NO)
+        // changeDone(i){
+        //     if(this.todos.done==true){
+        //         this.todos.done==false
+        //     }
+        // },
+
+        // ELIMINAZIONE TO DO DALLA LISTA
         deleteToDo(i){
             this.todos.splice(i,1)
         }
