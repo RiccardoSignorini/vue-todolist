@@ -51,12 +51,23 @@ createApp({
             }
         }
     },
+
+    created(){
+
+    },
+
     methods: {
         // FUNZIONI
         createToDo(){
             if(this.newToDo.text != ''){
                 this.todos.unshift(this.newToDo)
+
+                // this.newToDo.text = ""
             }
+        },
+
+        deleteToDo(i){
+            this.todos.splice(i,1)
         }
     }
 }).mount('#app')
