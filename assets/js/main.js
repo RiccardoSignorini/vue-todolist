@@ -42,11 +42,21 @@ createApp({
                 {
                     text: 'Fare il bucato',
                     done: false
-                }
-            ]
+                },
+            ],
+
+            newToDo: {
+                text: '',
+                done: false
+            }
         }
     },
     methods: {
         // FUNZIONI
+        createToDo(){
+            if(this.newToDo.text != ''){
+                this.todos.unshift(this.newToDo)
+            }
+        }
     }
 }).mount('#app')
