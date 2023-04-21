@@ -71,6 +71,15 @@ createApp({
             }
         },
 
+        // CHANGE VALORE BOOLEANO (NO)
+        changeDone(i){
+            if(this.todos[i].done==true){
+                this.todos[i].done=false
+            } else if(this.todos[i].done==false){
+                this.todos[i].done=true
+            }
+        },
+
         // ELIMINAZIONE TO DO DALLA LISTA
         deleteToDo(i){
             this.todos.splice(i,1)
