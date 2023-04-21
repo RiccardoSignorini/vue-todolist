@@ -21,7 +21,7 @@
             <!-- PARTE ALTA -->
             <div class="text-center justify-content-center">
                 <h1 class="my-4">ToDoList</h1>
-                <input type="text" placeholder="Scrivi qualcosa..." v-model="newToDo.text">
+                <input type="text" placeholder="Scrivi qualcosa..." v-model="newToDo">
                 <button type="button" class="btn btn-primary btn-sm mx-4" @click="createToDo">Aggiungi</button>
             </div>
             <!-- LISTA -->
@@ -33,7 +33,7 @@
                     <p class="m-0" @click="changeDone">{{element.text}}</p>
                     <i class="fa-regular fa-circle-xmark" @click="deleteToDo(index)"></i>
                 </div>
-
+                
             </div>
         </div>
     </div>

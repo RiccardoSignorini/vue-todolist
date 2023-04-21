@@ -47,10 +47,7 @@ createApp({
             ],
 
             // INPUT UTENTE
-            newToDo: {
-                text: '',
-                done: false
-            }
+            newToDo: ''
         }
     },
 
@@ -62,19 +59,17 @@ createApp({
     methods: {
         // AGGIUNTA TO DO ALLA LISTA
         createToDo(){
-            if(this.newToDo.text != ''){
-                this.todos.unshift(this.newToDo)
+            if(this.newToDo != ''){
+                this.todos.unshift(
+                    {
+                        text: this.newToDo,
+                        done: false
+                    }
+                )
 
-                // this.newToDo.text = ""
+                this.newToDo = ''
             }
         },
-
-        // CHANGE VALORE BOOLEANO (NO)
-        // changeDone(i){
-        //     if(this.todos.done==true){
-        //         this.todos.done==false
-        //     }
-        // },
 
         // ELIMINAZIONE TO DO DALLA LISTA
         deleteToDo(i){
